@@ -1,4 +1,4 @@
-# ⚾ mobx - To Do 만들기
+# 🗒 mobx - To Do 만들기
 
 ## 🗓 일정
 
