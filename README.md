@@ -37,9 +37,9 @@
 
 ## 📝 미션 저장소 및 진행 요구사항
 
-- 저장소를 fork/clone해 시작한다.
+- branch 를 각각 생성한다. (dami, hochan)
 - **git의 commit 단위는 앞 단계에서 README.md 파일에 정리한 기능 목록 단위로 추가**한다.
-- 구현이 완료되면 Pull Request를 올리고 코드리뷰를 진행한다.
+- 구현이 완료되면 본인의 branch에 Pull Request를 올리고 코드리뷰를 진행한다.
 
 <br>
 
