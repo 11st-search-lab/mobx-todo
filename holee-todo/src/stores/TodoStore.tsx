@@ -1,21 +1,28 @@
 import { action, makeObservable, observable } from 'mobx';
+import { ITodoContext } from '../interface';
 
 class TodoStore {
-  count: number = 0;
+  todoList: ITodoContext[] = [];
+  increaseId: number = 0;
 
   constructor() {
     makeObservable(this, {
-      count: observable,
-      increase: action,
-      decrease: action,
+      todoList: observable,
+      addContent: action,
+      removeContent: action,
     });
   }
 
-  increase = () => {
-    this.count++;
+  addContent = (content: string) => {
+    this.todoList.push({ id: this.increaseId, content: content, checked: false });
+    this.increaseId += 1;
   };
-  decrease = () => {
-    this.count--;
+
+  removeContent = (id: number) => {
+    const targetId = this.todoList.findIndex((v) => v.id === id);
+    if (targetId !== -1) {
+      this.todoList.splice(targetId, 1);
+    }
   };
 }
 

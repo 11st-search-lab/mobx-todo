@@ -1,24 +1,21 @@
 import React, { useContext } from 'react';
 import { observer } from 'mobx-react-lite';
-import StoreContext from '../contexts/stores';
 
-interface Itodo {
-  count: number;
-  increase: () => {};
-  decrease: () => {};
-}
+import StoreContext from '../contexts/stores';
+import { ItodoStore } from '../interface';
+import TodoForm from '../component/TodoForm';
+import TodoList from '../component/TodoList';
 
 function Todo() {
-  const todoStore: Itodo = useContext(StoreContext) as Itodo;
+  const todoStore: ItodoStore = useContext(StoreContext) as ItodoStore;
 
   console.log(todoStore);
   return (
     <div style={{ padding: '50px' }}>
       <div style={{ marginBottom: '50px' }}>
-        <h1>Count (Class)</h1>
-        <div>number: {todoStore.count}</div>
-        <button onClick={() => todoStore.increase()}>plus</button>
-        <button onClick={() => todoStore.decrease()}>minus</button>
+        <h1>Todo List</h1>
+        <TodoForm />
+        <TodoList />
       </div>
     </div>
   );
