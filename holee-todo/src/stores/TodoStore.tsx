@@ -18,9 +18,13 @@ class TodoStore {
     this.increaseId += 1;
   };
 
+  checkId = (targetId: number): boolean => {
+    return targetId !== -1;
+  };
+
   removeContent = (id: number) => {
     const targetId = this.todoList.findIndex((v) => v.id === id);
-    if (targetId !== -1) {
+    if (this.checkId(targetId)) {
       this.todoList.splice(targetId, 1);
     }
   };
