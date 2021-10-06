@@ -9,14 +9,12 @@ function TodoList() {
   const todoStore: ItodoStore = useContext(StoreContext) as ItodoStore;
   const { todoList } = todoStore;
 
-  console.log(todoList);
-
   return (
-    <>
+    <section>
       {todoList.map(({ id, content, checked }) => (
         <TodoItem key={id} id={id} content={content} checked={checked} />
       ))}
-    </>
+    </section>
   );
 }
 

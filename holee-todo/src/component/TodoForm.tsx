@@ -12,6 +12,7 @@ function TodoForm() {
     e.preventDefault();
     todoStore.addContent(content);
   };
+
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
     setContent(e.target.value);
   };
