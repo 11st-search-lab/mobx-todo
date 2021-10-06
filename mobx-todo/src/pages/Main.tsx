@@ -2,7 +2,12 @@ import TodoList from "../components/TodoList";
 import TodoInput from "../components/TodoInput";
 
 const Main = () => {
-  return <div></div>;
+  return (
+    <>
+      <TodoInput />
+      <TodoList />
+    </>
+  );
 };
 
 export default Main;
