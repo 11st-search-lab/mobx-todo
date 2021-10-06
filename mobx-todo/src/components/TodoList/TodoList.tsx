@@ -1,17 +1,22 @@
-import { useObserver } from "mobx-react";
+import { observer } from "mobx-react";
 import TodoItem from "./TodoItem";
 import TodoStore from "../../stores/TodoStore";
 
 const TodoList = () => {
   const { todoData } = TodoStore;
 
-  return useObserver(() => (
+  return (
     <ul>
       {todoData.map(todo => (
-        <TodoItem text={todo.content} key={todo.todoId}></TodoItem>
+        <TodoItem
+          id={todo.todoId}
+          text={todo.content}
+          checked={todo.completed}
+          key={todo.todoId}
+        ></TodoItem>
       ))}
     </ul>
-  ));
+  );
 };
 
-export default TodoList;
+export default observer(TodoList);
