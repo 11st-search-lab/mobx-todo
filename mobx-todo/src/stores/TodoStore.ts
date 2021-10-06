@@ -18,7 +18,7 @@ const TodoStore = observable<ITodo>({
   },
 
   removeTodo(id) {
-    this.todoData.filter(data => data.todoId !== id);
+    this.todoData = this.todoData.filter(data => data.todoId !== id);
   },
 });
 
