@@ -1,5 +1,4 @@
 import TodoStore from "../../stores/TodoStore";
-import { ITodoData } from "../../types/TodoType";
 import { useState } from "react";
 
 const TodoInput = () => {
@@ -11,7 +10,7 @@ const TodoInput = () => {
   };
 
   return (
-    <div>
+    <>
       <input
         type="text"
         placeholder="할 일을 입력하세요"
@@ -21,7 +20,7 @@ const TodoInput = () => {
       <button type="submit" onClick={handleAddTodo}>
         추가
       </button>
-    </div>
+    </>
   );
 };
 
