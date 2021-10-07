@@ -19,7 +19,13 @@ function TodoForm({ store }: { store: ItodoStore }) {
 
   return (
     <form className="todo-form" onSubmit={submitHandler}>
-      <input type="text" onChange={onChangeHandler} value={content} placeholder="할 일을 입력하세요." />
+      <input
+        className="todo-form-input"
+        type="text"
+        onChange={onChangeHandler}
+        value={content}
+        placeholder="할 일을 입력하세요."
+      />
       <button type="submit">등록</button>
     </form>
   );

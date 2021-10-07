@@ -2,6 +2,10 @@
   padding: 50px;
 }
 
+.todo-form-input {
+  margin-right: 2px;
+}
+
 .todo-item-content {
   background-color: white;
   border: 0;
