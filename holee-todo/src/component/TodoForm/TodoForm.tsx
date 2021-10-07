@@ -10,6 +10,7 @@ function TodoForm({ store }: { store: ItodoStore }) {
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
     addContent(content);
+    setContent('');
   };
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {
