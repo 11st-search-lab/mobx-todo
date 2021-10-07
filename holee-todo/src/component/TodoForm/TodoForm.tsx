@@ -5,11 +5,11 @@ import { ItodoStore } from '../../interface';
 
 function TodoForm({ store }: { store: ItodoStore }) {
   const [content, setContent] = useState('');
-  const todoStore: ItodoStore = store;
+  const { addContent } = store;
 
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
-    todoStore.addContent(content);
+    addContent(content);
   };
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>) => {

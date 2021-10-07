@@ -18,19 +18,19 @@ class TodoStore {
     this.increaseId += 1;
   };
 
+  removeContent = (id: number) => {
+    const targetId = this.todoList.findIndex((v) => v.id === id);
+    if (this.checkId(targetId)) {
+      this.removeTodoItem(targetId);
+    }
+  };
+
   checkId = (targetId: number): boolean => {
     return targetId !== -1;
   };
 
   removeTodoItem = (targetId: number) => {
     this.todoList.splice(targetId, 1);
-  };
-
-  removeContent = (id: number) => {
-    const targetId = this.todoList.findIndex((v) => v.id === id);
-    if (this.checkId(targetId)) {
-      this.removeTodoItem(targetId);
-    }
   };
 }
 
