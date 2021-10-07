@@ -1,12 +1,11 @@
-import React, { useContext, useState } from 'react';
+import React, { useState } from 'react';
 import { observer } from 'mobx-react-lite';
 
-import StoreContext from '../contexts/stores';
-import { ItodoStore } from '../interface';
+import { ItodoStore } from '../../interface';
 
-function TodoForm() {
+function TodoForm({ store }: { store: ItodoStore }) {
   const [content, setContent] = useState('');
-  const todoStore: ItodoStore = useContext(StoreContext) as ItodoStore;
+  const todoStore: ItodoStore = store;
 
   const submitHandler = (e: React.FormEvent) => {
     e.preventDefault();
@@ -18,7 +17,7 @@ function TodoForm() {
   };
 
   return (
-    <form onSubmit={submitHandler}>
+    <form className="todo-form" onSubmit={submitHandler}>
       <input type="text" onChange={onChangeHandler} value={content} placeholder="할 일을 입력하세요." />
       <button type="submit">등록</button>
     </form>

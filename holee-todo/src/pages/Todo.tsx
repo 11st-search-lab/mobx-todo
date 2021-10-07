@@ -3,6 +3,7 @@ import { observer } from 'mobx-react-lite';
 
 import StoreContext from '../contexts/stores';
 import { ItodoStore } from '../interface';
+import TodoTitle from '../component/Title';
 import TodoForm from '../component/TodoForm';
 import TodoList from '../component/TodoList';
 
@@ -11,13 +12,11 @@ function Todo() {
 
   console.log(todoStore);
   return (
-    <div style={{ padding: '50px' }}>
-      <div style={{ marginBottom: '50px' }}>
-        <h1>Todo List</h1>
-        <TodoForm />
-        <TodoList />
-      </div>
-    </div>
+    <section style={{ padding: '50px' }}>
+      <TodoTitle text="TodoList" />
+      <TodoForm store={todoStore} />
+      <TodoList store={todoStore} />
+    </section>
   );
 }
 
