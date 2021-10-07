@@ -10,4 +10,5 @@ export interface ItodoStore {
 
   addContent: (content: string) => void;
   removeContent: (id: number) => void;
+  toggleCheck: (id: number) => void;
 }

@@ -18,6 +18,13 @@ class TodoStore {
     this.increaseId += 1;
   };
 
+  toggleCheck = (id: number) => {
+    const targetId = this.todoList.findIndex((v) => v.id === id);
+    if (this.checkId(targetId)) {
+      this.todoList[targetId].checked = !this.todoList[targetId].checked;
+    }
+  };
+
   removeContent = (id: number) => {
     const targetId = this.todoList.findIndex((v) => v.id === id);
     if (this.checkId(targetId)) {
