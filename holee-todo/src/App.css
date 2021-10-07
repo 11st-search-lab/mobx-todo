@@ -1,3 +1,7 @@
+.todo {
+  padding: 50px;
+}
+
 .todo-item-content {
   background-color: white;
   border: 0;

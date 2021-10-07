@@ -10,9 +10,8 @@ import TodoList from '../component/TodoList';
 function Todo() {
   const todoStore: ItodoStore = useContext(StoreContext) as ItodoStore;
 
-  console.log(todoStore);
   return (
-    <section style={{ padding: '50px' }}>
+    <section className="todo">
       <TodoTitle text="TodoList" />
       <TodoForm store={todoStore} />
       <TodoList store={todoStore} />
