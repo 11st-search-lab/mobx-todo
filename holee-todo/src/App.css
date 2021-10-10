@@ -1,0 +1,26 @@
+.todo {
+  padding: 50px;
+}
+
+.todo-form-input {
+  margin-right: 2px;
+}
+
+.todo-item-content {
+  background-color: white;
+  border: 0;
+  outline: 0;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.todo-item-checked {
+  text-decoration: line-through;
+}
+
+.todo-item-remove-button {
+  background-color: white;
+  padding-left: 8px;
+  border: 0;
+  outline: 0;
+}
